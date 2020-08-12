@@ -3,4 +3,4 @@ spring:
         active: dev
 logging:
     file:
-        name: springboot.log
+        name: log.txt

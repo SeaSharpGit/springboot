@@ -1,0 +1,8 @@
+2020-08-12 19:18:14.870  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : Starting SpringbootApplicationTests on 192.168.0.101 with PID 2425 (started by sea in /Users/sea/Desktop/Projects/springboot)
+2020-08-12 19:18:14.871  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : The following profiles are active: dev
+2020-08-12 19:18:16.271  INFO 2425 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-12 19:18:16.581  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : Started SpringbootApplicationTests in 2.364 seconds (JVM running for 4.047)
+2020-08-12 19:18:16.810  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : 1
+2020-08-12 19:18:16.811  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : 2
+2020-08-12 19:18:16.811  INFO 2425 --- [main] c.s.s.SpringbootApplicationTests         : 3
+2020-08-12 19:18:16.836  INFO 2425 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
