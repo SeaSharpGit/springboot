@@ -1,0 +1,56 @@
+23:51:37.381 [main] INFO  c.s.springboot.SpringbootApplication - Starting SpringbootApplication on 192.168.0.102 with PID 1690 (/Users/sea/Desktop/Projects/springboot/target/classes started by sea in /Users/sea/Desktop/Projects/springboot)
+23:51:37.384 [main] INFO  c.s.springboot.SpringbootApplication - The following profiles are active: dev
+23:51:38.854 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:51:38.868 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:51:38.869 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:51:38.869 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+23:51:38.967 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:51:38.967 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1532 ms
+23:51:39.405 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+23:51:39.545 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:51:39.582 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:51:39.583 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:51:39.601 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:51:39.615 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:51:39.646 [main] INFO  c.s.springboot.SpringbootApplication - Started SpringbootApplication in 3.141 seconds (JVM running for 4.408)
+23:51:59.840 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:51:59.840 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:51:59.847 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+23:52:55.732 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+23:52:59.453 [main] INFO  c.s.springboot.SpringbootApplication - Starting SpringbootApplication on 192.168.0.102 with PID 1725 (/Users/sea/Desktop/Projects/springboot/target/classes started by sea in /Users/sea/Desktop/Projects/springboot)
+23:52:59.456 [main] INFO  c.s.springboot.SpringbootApplication - The following profiles are active: dev
+23:53:00.689 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:53:00.700 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:53:00.701 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:53:00.702 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+23:53:00.777 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:53:00.777 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1275 ms
+23:53:01.116 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+23:53:01.215 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:53:01.245 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:53:01.246 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:53:01.260 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:53:01.270 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:53:01.305 [main] INFO  c.s.springboot.SpringbootApplication - Started SpringbootApplication in 2.38 seconds (JVM running for 3.117)
+23:53:05.456 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:53:05.456 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:53:05.462 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+23:54:32.660 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+23:54:37.210 [main] INFO  c.s.springboot.SpringbootApplication - Starting SpringbootApplication on 192.168.0.102 with PID 1735 (/Users/sea/Desktop/Projects/springboot/target/classes started by sea in /Users/sea/Desktop/Projects/springboot)
+23:54:37.212 [main] INFO  c.s.springboot.SpringbootApplication - The following profiles are active: dev
+23:54:38.434 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:54:38.444 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:54:38.445 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:54:38.445 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+23:54:38.518 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:54:38.518 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1252 ms
+23:54:38.850 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+23:54:38.963 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:54:39.002 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:54:39.003 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:54:39.022 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:54:39.032 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:54:39.140 [main] INFO  c.s.springboot.SpringbootApplication - Started SpringbootApplication in 2.442 seconds (JVM running for 3.109)
+23:54:41.513 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:54:41.513 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:54:41.519 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms

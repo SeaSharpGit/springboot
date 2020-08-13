@@ -53,6 +53,19 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.15</version>
         </dependency>
+        <!-- =============================================== swagger ============================================ -->
+        <!-- swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <!-- swagger-ui -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
