@@ -14,7 +14,14 @@ public class HomeController {
 
     @GetMapping("test")
     @ApiOperation("添加用户的接口")
-    public String test(){
+    public String test() {
         return "hello world!";
     }
+
+    @GetMapping("error")
+    @ApiOperation("报错")
+    public void error() {
+        throw new RuntimeException("报错了！");
+    }
+
 }
