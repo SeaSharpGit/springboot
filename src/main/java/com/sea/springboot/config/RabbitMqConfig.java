@@ -11,6 +11,8 @@ import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.nio.charset.StandardCharsets;
+
 @Configuration
 public class RabbitMqConfig {
 
@@ -40,10 +42,12 @@ public class RabbitMqConfig {
     public SimpleMessageListenerContainer messageListenerContainer(ConnectionFactory connectionFactory) {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
         container.setQueueNames("test");
+        container.setBatchSize(1);
         container.setMessageListener((ChannelAwareMessageListener) (message, channel) -> {
-            System.out.println("====接收到消息=====");
-            System.out.println(message.getMessageProperties());
-            System.out.println(new String(message.getBody()));
+            System.out.println("接收到消息：" + new String(message.getBody(), StandardCharsets.UTF_8));
+        });
+        container.setErrorHandler(a -> {
+            System.out.println("接受消息错误：" + a.getMessage());
         });
         return container;
     }

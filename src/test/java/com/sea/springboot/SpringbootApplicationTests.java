@@ -18,9 +18,5 @@ class SpringbootApplicationTests {
         rabbitTemplate.convertAndSend("test", "你好");
     }
 
-    @Test
-    void rabbitMqReceiveMessage() {
-        rabbitTemplate.convertAndSend("test", "你好");
-    }
 
 }
