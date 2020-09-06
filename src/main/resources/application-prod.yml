@@ -3,6 +3,6 @@ spring:
         master:
             type: com.alibaba.druid.pool.DruidDataSource
             driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8
-            password: wsc
+            url: jdbc:mysql://127.0.0.1:3306/Test
             username: root
+            password: sa123456

@@ -1,7 +1,9 @@
 package com.sea.springboot.controller;
 
+import com.sea.springboot.service.HomeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,12 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("home")
 @Api(tags = "用户操作接口")
+@RequiredArgsConstructor
 public class HomeController {
+
+    private final HomeService homeService;
 
     @GetMapping("test")
     @ApiOperation("添加用户的接口")
-    public String test() {
-        return "hello world!";
+    public void test() {
+        homeService.test();
     }
 
     @GetMapping("error")
