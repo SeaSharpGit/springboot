@@ -19,4 +19,9 @@ class SpringbootApplicationTests {
     }
 
 
+    @Test
+    void test(){
+
+    }
+
 }
