@@ -13,6 +13,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * swagger配置
+ * http://localhost:8080/swagger-ui/
+ * http://localhost:8080/swagger-ui/index.html
  */
 @Configuration
 public class SwaggerConfig {

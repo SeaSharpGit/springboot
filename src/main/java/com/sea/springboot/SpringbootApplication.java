@@ -7,7 +7,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 
 @SpringBootApplication
 @EnableOpenApi
-@MapperScan(basePackages = "com.sea.springboot.master.mapper")
+@MapperScan(basePackages = "com.sea.springboot.mapper")
 public class SpringbootApplication {
 
     public static void main(String[] args) {
