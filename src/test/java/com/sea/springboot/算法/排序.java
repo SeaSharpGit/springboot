@@ -32,9 +32,9 @@ public class 排序 {
         int[] arrs = new int[]{7, 2, 4, 2, 8, 1, 9, 8, 21, 27};
 
         for (int i = 1; i < arrs.length; i++) {
-            int index = 0;
+            int index = i;
             for (int j = 0; j < i; j++) {
-                if (arrs[j] <= arrs[i]) {
+                if (arrs[j] >= arrs[i]) {
                     index = j;
                     break;
                 }
