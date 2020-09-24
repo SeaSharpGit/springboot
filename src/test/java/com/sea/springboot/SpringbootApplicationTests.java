@@ -9,19 +9,24 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-@RequiredArgsConstructor
 class SpringbootApplicationTests {
 
-    private final RabbitTemplate rabbitTemplate;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Test
     void rabbitMqSendMessage() {
-        rabbitTemplate.convertAndSend("test", "你好");
+        try {
+            rabbitTemplate.convertAndSend("queue23", "你好");
+            int a = 1;
+        } catch (Exception ex) {
+            int a = 1;
+        }
     }
 
 
     @Test
-    void test(){
+    void test() {
 
     }
 
