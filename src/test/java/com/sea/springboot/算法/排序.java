@@ -3,15 +3,16 @@ package com.sea.springboot.算法;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.awt.*;
+
 @SpringBootTest
 public class 排序 {
 
     @Test
     void test() {
         int[] arr = new int[]{7, 2, 4, 2, 8, 1, 9, 8, 27, 21};
-        order4(arr);
+        order5(arr);
         System.out.println(arr);
-        int a = 1;
     }
 
     /**
@@ -141,23 +142,49 @@ public class 排序 {
         }
     }
 
+    /**
+     * 快读排序
+     *
+     * @param arr
+     */
     private void order5(int[] arr) {
         if (arr.length <= 1) {
             return;
         }
-        for (int i = 0; i < arr.length; i++) {
-            int min = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[min]) {
-                    min = j;
-                }
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    private void quickSort(int[] arr, int m, int n) {
+        if (m >= n) {
+            return;
+        }
+        //获取分区点
+        int x = Partition(arr, m, n);
+        quickSort(arr, m, x - 1);
+        quickSort(arr, x + 1, n);
+    }
+
+    private int Partition(int[] arr, int m, int n) {
+        int point = arr[n];
+        int i = m;
+        int temp;
+        for (int j = m; j < n; j++) {
+            if (arr[j] >= point) {
+                continue;
             }
-            if (min != i) {
-                int temp = arr[i];
-                arr[i] = arr[min];
-                arr[min] = temp;
+            if (i == j) {
+                i++;
+            } else {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
             }
         }
+        temp = arr[i];
+        arr[i] = arr[n];
+        arr[n] = temp;
+        return i;
     }
 
 

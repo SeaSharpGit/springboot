@@ -13,7 +13,7 @@ public class FirstMessageHandler {
 
     @RabbitHandler
     public void handleMessage(String message) {
-        int a=1;
+        System.out.println(message);
     }
 
     @RabbitHandler
