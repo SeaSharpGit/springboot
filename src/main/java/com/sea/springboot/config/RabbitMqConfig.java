@@ -1,5 +1,6 @@
 package com.sea.springboot.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.Profile;
 
 import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @Configuration
 @Profile("prod")
 public class RabbitMqConfig {
@@ -44,9 +46,10 @@ public class RabbitMqConfig {
         //设置Exchange默认操作的exchange和routingkey
         rabbitTemplate.setExchange("");
         rabbitTemplate.setRoutingKey("");
-        //当消息不能路由到队列中去的时候，会触发callback
+        //当消息不能路由到队列中去的时候，会触发
         rabbitTemplate.setMandatory(true);
         rabbitTemplate.setReturnCallback((message, replyCode, replyText, exchange, routingKey) -> {
+            //消息不能路由到队列
             System.out.println("============returnedMessage method=========");
             System.out.println("message: " + message);
             System.out.println("replyCode: " + replyCode);
@@ -55,7 +58,7 @@ public class RabbitMqConfig {
             System.out.println("routingKey: " + routingKey);
         });
 
-        //消息确认PublisherConfirm
+        //消息到达Exchange是否成功
         rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
             /**
              * @param correlationData 唯一标识，有了这个唯一标识，我们就知道可以确认（失败）哪一条消息了
@@ -64,10 +67,8 @@ public class RabbitMqConfig {
              */
             @Override
             public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-                if(ack){
-                    System.out.println("消息id为: "+correlationData+"的消息，已经被ack成功");
-                }else{
-                    System.out.println("消息id为: "+correlationData+"的消息，消息nack，失败原因是："+cause);
+                if(!ack){
+                    log.error("消息id为: "+correlationData+"的消息，消息nack，失败原因是："+cause);
                 }
             }
         });
@@ -84,7 +85,7 @@ public class RabbitMqConfig {
     public RabbitListenerContainerFactory<?> rabbitListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
-        //手动ACK
+        //消费者手动ACK
         factory.setAcknowledgeMode(AcknowledgeMode.MANUAL);
         return factory;
     }
