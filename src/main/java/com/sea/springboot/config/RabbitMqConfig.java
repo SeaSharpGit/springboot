@@ -23,16 +23,17 @@ import java.util.concurrent.TimeUnit;
 @Profile("prod")
 public class RabbitMqConfig {
 
-    @Bean
-    public ConnectionFactory connectionFactory() {
-        CachingConnectionFactory factory = new CachingConnectionFactory();
-        factory.setUri("amqp://admin:123456@192.168.83.129:5672");
-        //当消息不能路由到队列中去的时候，会触发回调
-        factory.setPublisherReturns(true);
-        //开启消息确认PublisherConfirm
-        factory.setPublisherConfirmType(CachingConnectionFactory.ConfirmType.SIMPLE);
-        return factory;
-    }
+//    @Bean
+//    public ConnectionFactory connectionFactory() {
+//        //org.springframework.boot.autoconfigure.amqp.RabbitProperties
+//        CachingConnectionFactory factory = new CachingConnectionFactory();
+//        factory.setUri("amqp://admin:123456@192.168.83.129:5672");
+//        //当消息不能路由到队列中去的时候，会触发回调
+//        factory.setPublisherReturns(true);
+//        //开启消息确认PublisherConfirm
+//        factory.setPublisherConfirmType(CachingConnectionFactory.ConfirmType.SIMPLE);
+//        return factory;
+//    }
 
     @Bean
     public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory) {
