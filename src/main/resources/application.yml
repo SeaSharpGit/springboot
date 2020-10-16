@@ -8,6 +8,16 @@ spring:
       minimum-idle: 10
       #最大连接数
       maximum-pool-size: 20
+  rabbitmq:
+    addresses: amqp://admin:123456@192.168.83.129:5672
+    #开启消息确认PublisherConfirm，消息到达Exchange触发回调
+    publisher-confirm-type: simple
+    #当消息不能路由到队列中去的时候，会触发回调
+    publisher-returns: true
+    listener:
+      direct:
+        #消费者手动ACK
+        acknowledge-mode: manual
 springfox:
   documentation:
     swagger-ui:
