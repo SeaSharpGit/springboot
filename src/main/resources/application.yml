@@ -18,6 +18,7 @@ spring:
       direct:
         #消费者手动ACK
         acknowledge-mode: manual
+
 springfox:
   documentation:
     swagger-ui:

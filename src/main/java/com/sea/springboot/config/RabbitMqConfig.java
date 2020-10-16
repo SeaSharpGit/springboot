@@ -19,7 +19,8 @@ public class RabbitMqConfig {
         //设置Exchange默认操作的exchange和routingkey
         rabbitTemplate.setExchange("");
         rabbitTemplate.setRoutingKey("");
-
+        //生产者和消费者使用不同的Connection，避免故障或阻塞
+        rabbitTemplate.setUsePublisherConnection(true);
         //消息到达Exchange是否成功
         rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
             /**
