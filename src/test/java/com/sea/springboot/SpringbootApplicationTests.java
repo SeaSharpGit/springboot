@@ -20,9 +20,10 @@ class SpringbootApplicationTests {
     @Test
     void rabbitMqSendMessage() {
         try {
-            MessageProperties messageProperties = new MessageProperties();
             //设置消息的过期时间
+            MessageProperties messageProperties = new MessageProperties();
             messageProperties.setExpiration("10000");
+
             String msg="你好";
             String pkid = "1";
             Message message = new Message(msg.getBytes("UTF-8"),messageProperties);
