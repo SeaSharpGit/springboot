@@ -25,7 +25,6 @@ public class HomeController {
     @GetMapping("test")
     @ApiOperation("添加用户的接口")
     public List<User> test() {
-        int userId = jwtUtil.getUserId();
         return homeService.test();
     }
 
