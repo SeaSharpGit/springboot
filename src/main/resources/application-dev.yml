@@ -5,9 +5,6 @@ spring:
     username: root
     password: sa123456
 
-springfox:
-  documentation:
-    swagger-ui:
-      enabled: true
+
 
 

@@ -22,6 +22,6 @@ spring:
 springfox:
   documentation:
     swagger-ui:
-      enabled: false
+      enabled: true
 mybatis:
   mapper-locations: classpath:mapper/*.xml

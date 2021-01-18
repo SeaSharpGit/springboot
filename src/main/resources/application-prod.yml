@@ -4,8 +4,3 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/Test
     username: root
     password: sa123456
-
-springfox:
-  documentation:
-    swagger-ui:
-      enabled: false

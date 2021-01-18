@@ -1,5 +1,6 @@
 package com.sea.springboot.controller;
 
+import com.sea.springboot.common.JwtUtil;
 import com.sea.springboot.entity.User;
 import com.sea.springboot.service.HomeService;
 import io.swagger.annotations.Api;
@@ -19,10 +20,12 @@ import java.util.List;
 public class HomeController {
 
     private final HomeService homeService;
+    private final JwtUtil jwtUtil;
 
     @GetMapping("test")
     @ApiOperation("添加用户的接口")
     public List<User> test() {
+        int userId = jwtUtil.getUserId();
         return homeService.test();
     }
 
@@ -30,6 +33,13 @@ public class HomeController {
     @ApiOperation("报错")
     public void error() {
         throw new RuntimeException("报错了！");
+    }
+
+    @GetMapping("login")
+    @ApiOperation("登录")
+    public String login(String userName, String password) {
+        String token = jwtUtil.createToken(1);
+        return token;
     }
 
 }
