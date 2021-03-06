@@ -1,4 +1,4 @@
-package com.sea.springboot.rabbitmq;
+package com.sea.springboot.rabbitmqhandler;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
